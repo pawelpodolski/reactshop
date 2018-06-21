@@ -12,10 +12,16 @@ class CategoryGrid extends React.Component {
             .then(json => this.setState({ categories: json.ids }));
     }
 
+    handleClick() {
+        alert('Clicked me!');
+    }
+
     render() {
         return (
             <div className="category-grid">
-                {this.state.categories.map(category => <CategoryItem key={category} name={category} />)}
+                {this.state.categories.map(
+                    category => <CategoryItem key={category} name={category} handleClick={this.handleClick} />
+                )}
             </div>
         );
     }
