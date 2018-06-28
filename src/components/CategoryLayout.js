@@ -1,6 +1,7 @@
 import React from 'react';
 import CategoryGrid from "./CategoryGrid";
 import CategoryDetails from "./CategoryDetails";
+import { Route } from "react-router-dom";
 
 class CategoryLayout extends React.Component {
     categories = ['Category 1', 'Category 2', 'Category 3', 'Category 4'];
@@ -12,8 +13,11 @@ class CategoryLayout extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <CategoryGrid categories={this.categories}/>
-                <CategoryDetails category={this.category}/>
+                <Route exact path="/" render={() => <CategoryGrid categories={this.categories}/>}/>
+                <Route
+                    path="/category/:id"
+                    render={() => <CategoryDetails category={this.category}/>}
+                />
             </React.Fragment>
         );
     }
