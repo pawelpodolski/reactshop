@@ -22,7 +22,7 @@ class CategoryLayout extends React.Component {
         }
         return (
             <React.Fragment>
-                <Route exact path="/" render={() => <CategoryGrid categories={categories.ids}/>}/>
+                <Route exact path="/" render={() => <CategoryGrid categories={categories}/>}/>
                 <Route
                     path="/category/:id"
                     render={(props) => <CategoryDetails category={categories.entities[props.match.params.id]}/>}
