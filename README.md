@@ -7,6 +7,15 @@ are taken to create this app.
 
 ## Development
 
+### Step 3 - Component state
+In this step we're introducing component state
+
+- Declare class member `state` within `CategoryGrid`. As this is the component
+  default internal state, initialize it with an empty object. 
+- Add a `categories` property to the component initial state that will hold 
+  a list of categories to be rendered.
+- Render `CategoryItem` elements based on the aforementioned list. 
+
 ### Exercise 1 - Writing container components
 
 - Create `CategoryLayout` component.
