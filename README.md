@@ -7,6 +7,13 @@ are taken to create this app.
 
 ## Development
 
+### Step 9 - Linking
+Let's make some final refinements:
+
+- Update `CategoryItem`: `react-router-dom` provides `Link` component
+  that allows navigating and accepts `to` property with url.
+- Get rid of the click handler ;)
+
 ### Step 8 - Lifting state
 Notice that now there are two places where we would need information about
 categories. Those places (URLs `/` and `/category/:id`) can be visited 
